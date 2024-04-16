@@ -19,3 +19,5 @@ export const createClient = (connection, authenticationOptions = {}) => {
 
   return client
 }
+
+console.log("client.js loaded");

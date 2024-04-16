@@ -29,6 +29,11 @@ app.use(urlencoded({ extended: true }))
 // Host the public folder
 app.use('/', serveStatic(app.get('public')))
 
+// some test endpoint to see whether alive
+app.use('/alive', (req, res) => {
+  res.send('Oh Hello There');
+});
+
 // Configure services and real-time functionality
 app.configure(rest())
 app.configure(
