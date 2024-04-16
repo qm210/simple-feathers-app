@@ -7,6 +7,8 @@ export const channels = (app) => {
   )
 
   app.on('connection', (connection) => {
+    console.log("Connection made!", connection);
+    
     // On a new real-time connection, add it to the anonymous channel
     app.channel('anonymous').join(connection)
   })
